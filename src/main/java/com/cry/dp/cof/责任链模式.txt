@@ -1,0 +1,10 @@
+责任链模式：chain of responsibility
+
+v1:原始的没有用过滤器去过滤字符串
+v2:设计接口Filter ,有doFilter(Object obj)
+v3:在Main中创建一个存放Filter的集合,将Filter放进去，进行遍历doFilter
+v4:将集合抽取出来形成过滤链FilterChain ,FilterChain里面有两个方法分别是doFilter和addFilter()
+v5:将FilterChain实现Filter接口 addFilter接口返回值为Filter new FilterChain().addFilter(new Filter1()).addFilter();
+v6:将doFilter的返回值由void改成boolean，可以使过滤通过判断停下来。
+v7:就是Web里面FilterChai
+n 通过递归来实行。
